@@ -1,0 +1,176 @@
+/* 全局設置 */
+* {
+  margin: 0;/*外邊距*/
+  padding: 0;/*內邊距*/
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f1f1f1;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(135deg, #9dd8ff, #ffffff); /* 漸變色背景，模擬布料 */
+  padding: 20px;
+}
+
+.main-header {
+  width: 100%;
+  background: #75b5ff;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 8px 16px rgba(35, 133, 214, 0.726);
+  position: relative;
+  top: 0;
+}
+
+.main-header h1 {
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* 個人簡介區 */
+.profile {
+  max-width: 900px;
+  width: 100%;
+  padding: 40px;
+  background-color: #e7f7ff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(20px); /* 向下位移 */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* 頭像區 */
+.profile-header {
+   display: flex;
+  align-items: center; /* 垂直居中對齊 */
+  gap: 15px;
+}
+
+.profile-header img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header h2 {
+  font-size: 2.5em;
+  color: #333;
+  font-weight: bold;
+}
+
+/* 內容區 */
+.profile-content {
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #2c3e50;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.intro p, .experience p, .skills ul {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #7f8c8d;
+}
+
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills li {
+  margin-bottom: 8px;
+  padding-left: 10px;
+  position: relative;
+}
+
+.skills li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #3498db;
+  font-size: 1.5em;
+  top: 0;
+}
+
+section {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: rgb(255, 255, 255);
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* 聯絡方式 */
+.contact a {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+}
+
+.contact a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+
+/* 半圓形按鈕容器 */
+.button-container {
+  display: flex; 
+  justify-content: center; /* 水平居中 */
+  gap: 20px; /* 間距 */
+  margin-top: 50px; 
+  flex-wrap: wrap; /* 換行 */
+}
+
+/* 半圓形按鈕 */
+.half-circle-btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 30px;
+  background-color: #83cbfc; /* 按鈕顏色 */
+  color: #fff; /* 文字顏色 */
+  font-size: 1.2em;
+  font-weight: bold;
+  border-radius: 30px; /* 半圓角效果 */
+  position: relative;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+/* 鼠標懸停效果 */
+.half-circle-btn:hover {
+  background-color: #2aaaff; /* 懸停時改變顏色 */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 按鈕*/
+.half-circle-btn::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5em;
+}
